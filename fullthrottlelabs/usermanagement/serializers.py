@@ -15,7 +15,6 @@ class UserSerializer(ModelSerializer):
         fields = ["id","real_name","tz","activity"]
 
     def to_representation(self, instance):
-        # instance is the model object. create the custom json format by accessing instance attributes normaly and return it
         identifiers = dict()
         activity_obj = ActivityPeriod.objects.filter(activity_periods=instance.id).values("start_time","end_time")
         identifiers['id'] = instance.id

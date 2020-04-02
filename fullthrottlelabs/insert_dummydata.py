@@ -24,8 +24,6 @@ insert_users_into_table('bhupathi','America/Los_Angeles')
 insert_users_into_table('ajay','Asia/kolkata')
 
 
-#########################################################################################################
-
 def insert_activity_periods_into_table(start_time, end_time,activity_periods):
     try:
         connection = sqlite3.connect('db.sqlite3')
